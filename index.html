@@ -220,7 +220,7 @@ header {
 /* =====================================================
    LAYOUT
 ===================================================== */
-.layout { display:flex; flex:1; }
+.layout { display:flex; flex:1; min-height: calc(100vh - 64px); }
 
 /* =====================================================
    SIDEBAR
@@ -572,7 +572,11 @@ footer {
   /* LINE 570 ► MOBILE CARD GRID — 1 column on phone */
   .cards-grid { grid-template-columns: 1fr; gap: 14px; }
   main { padding: 20px 16px 60px; }
-  .hdr-clock { display: none; } /* LINE 573 ► HIDE CLOCK ON MOBILE — remove line to show */
+  .hdr-clock {
+    font-size: 0.62rem; /* smaller on mobile */
+    line-height: 1.3;
+    text-align: right;
+  } /* clock visible on mobile but compact */
   .site-title { font-size: 0.82rem; }
   .site-sub { font-size: 0.55rem; }
 }
